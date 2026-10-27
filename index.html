@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mengele Maxim — My Portfolio">
+  <meta name="theme-color" content="#111412">
+  <title>Mengele Maxim — Portfolio</title>
+  <link rel="stylesheet" href="style.css?v=20261027-32">
+  <script src="app.js?v=20261027-17" defer></script>
+</head>
+<body>
+  <div class="preloader" id="preloader" role="status" aria-label="Загрузка портфолио">
+    <div class="preloader-inner">
+      <img class="preloader-star" src="assets/loading-star.png" alt="">
+    </div>
+  </div>
+  <main id="app">
+    <section id="home" class="screen home" aria-label="Главная">
+      <nav class="top-nav"><a href="#social">SOCIAL</a><a href="#about">ABOUT ME</a></nav>
+      <div class="home-title"><h1>My Portfolio</h1><a href="#works">NEXT</a></div>
+      <div class="volume-control">
+        <label class="visually-hidden" for="volume-slider">Громкость музыки</label>
+        <input class="volume-slider" id="volume-slider" type="range" min="0" max="100" value="55" aria-label="Громкость музыки">
+      </div>
+    </section>
+    <section id="works" class="screen works" aria-label="Работы" hidden>
+      <a class="back" href="#home">BACK</a>
+      <div id="featured">
+        <div class="art-card slot-1"><img src="assets/card-1.png" alt=""></div>
+        <div class="art-card slot-2"><img src="assets/card-2.png" alt=""></div>
+        <div class="art-card slot-3"><img src="assets/card-3.png" alt=""></div>
+        <div class="art-card slot-4"><img src="assets/card-4.png" alt=""></div>
+        <div class="art-card slot-5"><img src="assets/card-5.png" alt=""></div>
+      </div>
+      <h1 class="works-title">MY<br>WORKS<img src="assets/asterisk.png" alt=""></h1>
+      <span class="next">NEXT</span>
+    </section>
+    <section id="social" class="screen social" aria-label="Соцсети" hidden>
+      <a class="back" href="#home">BACK</a>
+      <div class="social-list">
+        <div><h1>YouTube</h1><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">https://www.youtube.com</a></div>
+        <div><h2>TikTok</h2><a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">https://www.tiktok.com</a></div>
+        <div><h2>Telegram</h2><a href="https://t.me/mengele808" target="_blank" rel="noopener noreferrer">https://t.me/mengele808</a></div>
+      </div>
+    </section>
+    <section id="about" class="screen about" aria-label="Обо мне" hidden>
+      <a class="back" href="#home">BACK</a>
+      <h1 class="about-title">ABOUT<br>ME</h1>
+      <img class="about-star" src="assets/about-star.png" alt="">
+      <div class="about-copy">
+        <p>I’m Maxim Mengele, a multidisciplinary creator<br>working across music, design, video, and code.</p>
+        <p>I create atmospheric projects shaped by<br>a dark, experimental aesthetic.</p>
+      </div>
+    </section>
+  </main>
+  <audio id="site-audio" src="assets/site-music.mp3" preload="auto" loop autoplay playsinline></audio>
+</body></html>
