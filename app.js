@@ -111,6 +111,12 @@ async function runPreloader() {
   const minimumTime = previewMode ? 15000 : (reduceMotion.matches ? 0 : 1200);
   await Promise.all([Promise.allSettled(loading), new Promise(resolve => setTimeout(resolve, minimumTime))]);
 
+  // Keep the loaded artwork on screen long enough to be perceived.
+  await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+  if (!previewMode && !reduceMotion.matches) {
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  }
+
   if (!previewMode) {
     try {
       sessionStorage.setItem('portfolio-preloader-shown', '1');
