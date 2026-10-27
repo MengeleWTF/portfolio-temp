@@ -84,18 +84,22 @@ async function runPreloader() {
     return;
   }
 
+  const loadingBackground = window.matchMedia('(max-width: 700px)').matches
+    ? 'assets/loading-bg-mobile.webp'
+    : 'assets/loading-bg.webp';
+
   const assetPaths = [
-    'assets/loading-bg.webp',
+    loadingBackground,
     'assets/loading-star.png',
     'assets/home-bg.webp',
     'assets/works-bg.webp',
     'assets/social-bg.webp',
     'assets/about-bg.webp',
-    'assets/card-1.png',
-    'assets/card-2.png',
-    'assets/card-3.png',
-    'assets/card-4.png',
-    'assets/card-5.png'
+    'assets/card-1.webp',
+    'assets/card-2.webp',
+    'assets/card-3.webp',
+    'assets/card-4.webp',
+    'assets/card-5.webp'
   ];
 
   const loading = assetPaths.map(path => new Promise(resolve => {
