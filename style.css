@@ -910,6 +910,16 @@
   transform: translate3d(8vw, 0, 0);
 }
 
+/* On wide screens only the outgoing page moves. Keeping the new page fixed
+   prevents the visible snap back that followed desktop navigation. */
+@media (min-width: 900px) and (min-aspect-ratio: 1/1) {
+  .screen.is-entering {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: none;
+  }
+}
+
 .screen::after {
   content: "";
   position: absolute;
