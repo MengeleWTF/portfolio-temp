@@ -999,9 +999,9 @@ body {
   }
 }
 
-/* Desktop only: move the home NEXT control 2 cm lower. */
+/* Desktop only: keep the home NEXT control 1 cm below its original position. */
 @media (min-width: 900px) and (min-aspect-ratio: 1/1) {
   .home-title > a {
-    top: calc(10px + 2cm);
+    top: calc(10px + 1cm);
   }
 }
