@@ -998,3 +998,10 @@ body {
       drop-shadow(0 3px 5px rgba(3, 3, 3, .22));
   }
 }
+
+/* Desktop only: move the home NEXT control 2 cm lower. */
+@media (min-width: 900px) and (min-aspect-ratio: 1/1) {
+  .home-title > a {
+    top: calc(10px + 2cm);
+  }
+}
